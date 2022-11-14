@@ -1,0 +1,209 @@
+import java.util.Scanner
+
+fun main(args: Array<String>)
+{
+    // 1) HELLO WORLD
+    println("1) Hello, World!!!")
+
+    println("_______________________")
+
+    // 2) DATA TYPES
+    println("2) DATA TYPES")
+    var language = "French"
+    val score = 100
+
+    // Alternate Method: Specifying Type
+    var language2: String = "French"
+    val score2: Int = 100
+
+    // Another Method
+    var language3: String   // variable declaration of type String
+    language3 = "French"    // variable initialization
+    val score3: Int         // variable declaration of type Int
+    score3 = 100            // variable initialization
+
+    // Here are few examples that results into error.
+    /*
+    var language            // Error
+    language = "French"
+
+    var language: String
+    language = 14         // Error
+
+     */
+
+    // val - Immutable Reference
+    // var - Mutable Reference
+    // Hint - var meaning variable, val meaning value
+
+    // If you are not sure what number value a variable will be assigned in the program
+    // you can specify it as "Number" type.
+    // This allows you to assign both integer and
+    // floating-point value to the variable (one at a time).
+
+    var test: Number = 6.9
+    println("$test")
+
+    test = 69
+    // Int smart cast from Number
+    println("$test")
+
+    test = 6969L
+    // Long smart cast from Number
+    println("$test")
+
+    println("_______________________")
+
+    // 3) OPERATORS
+    println("3) Operators")
+
+    // Arithmetic Operators
+    println("Arithmetic Operators")
+
+    val n1 = 6
+    val n2 = 9
+    var result: Number
+
+    result = n1 + n2
+    println("number1 + number2 = $n1 + $n2 = $result")
+
+    result = n1 - n2
+    println("number1 - number2 = $n1 - $n2 = $result")
+
+    result = n1 * n2
+    println("number1 * number2 = $n1 * $n2 = $result")
+
+    result = n1 / n2
+    println("number1 / number2 = $n1 / $n2 = $result")
+
+    result = n1 % n2
+    println("number1 % number2 = $n1 % $n2 = $result")
+
+    // Unary Operators
+    println("\nUnary Operators")
+
+    val a = 1
+    val b = true
+    var c = 1
+
+    var result2: Int
+    var booleanResult: Boolean
+
+    result2 = -a
+    println("-a = -$a = $result2")
+
+    booleanResult = !b
+    println("!b = !$b = $booleanResult")
+
+    --c
+    println("--c = --$c == $c")
+
+    // Comparison Operators
+    println("\nComparison Operators")
+
+    val x = 6
+    val y = 9
+
+    println("x = $x")
+    println("y = $y")
+
+    val max = if(x > y)
+    {
+        println("x is larger than y.")
+        x
+    }
+    else
+    {
+        println("y is larger than x.")
+        y
+    }
+
+    println("Max = $max")
+
+    // Logical Operators
+    println("\nLogical Operators")
+
+    val p = 3
+    val q = 2
+    val r = 1
+
+    print("p = $p, ")
+    print("q = $q, ")
+    println("r = $r")
+
+    var result3: Boolean
+    result3 = (p>q) && (p>r) // result3 = (p>q) and (p>r)
+    println("p>q and p>r")
+    println(result3)
+
+    // in Operator
+    println("\nin Operator")
+
+    val numbers = intArrayOf(1,4,42,-3)
+
+    if (4 in numbers)
+    {
+        println("\"numbers\" array contains 4.")
+    }
+
+    // Index access Operator
+    println("\nIndex access Operator")
+
+    val arr = intArrayOf(1,2,3,4,-1)
+    println(arr[1])
+    arr[1] = 12
+    println(arr[1])
+
+    println("_______________________")
+
+    // TYPE CONVERSION
+    println("4) Type Conversion")
+
+    // Larger to Smaller Type
+    // Conversion from larger to smaller type may truncate the value
+    val number1: Int = 696969
+    val number2: Byte = number1.toByte()
+    println("number1 = $number1")
+    println("number2 = $number2")
+
+    println("_______________________")
+
+    // Expression, Statements and Blocks
+    println("5) Expression, Statements and Blocks")
+
+    /* In Kotlin, if is an expression unlike Java (In Java, if is a statement).
+    For example: */
+
+    var d = 6
+    var e = 9
+    var maximum: Int
+
+    maximum = if(d>e) d else e
+    println("$max")
+
+    println("_______________________")
+
+    // BASIC INPUT/OUTPUT
+    println("6) Basic Input/Output")
+
+    var abc = 69
+
+    println("score = $score")
+    println("${score+score}")
+
+    //Input
+    print("Enter text: ")
+    val stringInput = readLine()!!
+    println("You entered: $stringInput")
+
+    // Using Scanner
+    val reader = Scanner(System.`in`) // Creates an instance which takes input from standard input (keyboard)
+
+    print("Enter a number: ")
+    var Integer: Int = reader.nextInt()
+
+    println("You entered: $Integer")
+
+
+
+}
